@@ -4,8 +4,8 @@ A browser extension that automatically injects the latest React Scan into web pa
 
 ## 🚀 Features
 
-- **Always Latest**: Automatically downloads the latest React Scan from CDN
-- **Iframe Support**: Works correctly in iframes with enhanced compatibility
+- **Patched React Scan**: Uses a locally bundled version with enhanced iframe support
+- **Iframe Support**: Works correctly in iframes with source code modifications
 - **Zero Configuration**: Works out of the box with sensible defaults
 - **Simple Toggle**: Easy on/off switch in the popup
 - **Auto-Injection**: Automatically injects into all web pages
@@ -45,14 +45,14 @@ Try these React applications to see React Scan in action:
 
 This extension:
 
-1. **Auto-injects** the latest React Scan from `https://unpkg.com/react-scan@latest/dist/auto.global.js`
-2. **Enhances iframe support** with optimized configuration
+1. **Auto-injects** a locally bundled, patched version of React Scan (`react-scan.js`)
+2. **Enhances iframe support** with source code modifications (`allowInIframe` forced to `true`)
 3. **Uses safe defaults** for all options
 4. **Works immediately** without requiring page refreshes in most cases
 
 The extension follows a simple, reliable pattern:
-- Content script signals the need for injection
-- Background script injects the latest React Scan with proper configuration
+- Content script injects the locally bundled React Scan with iframe patches
+- Page script applies configuration with enhanced iframe support
 - React Scan automatically starts analyzing React performance
 
 ## 🔧 Configuration
@@ -77,7 +77,7 @@ You can toggle the extension on/off using the popup interface.
 
 This extension addresses common issues with other React Scan extensions:
 
-- ✅ **Always uses the latest React Scan version** (no manual updates needed)
+- ✅ **Uses patched React Scan version** with enhanced iframe compatibility
 - ✅ **Enhanced iframe support** with improved compatibility
 - ✅ **Simple and reliable** injection mechanism  
 - ✅ **No complex configuration** required
@@ -90,14 +90,14 @@ This extension addresses common issues with other React Scan extensions:
 
 - **Manifest V3** compatible for modern browsers
 - **Content Script**: Minimal signal for injection
-- **Background Script**: Handles CDN injection with proper configuration
+- **Background Script**: Manages extension state and configuration
 - **Popup**: Clean, simple toggle interface
 
 ### Security
 
-- Uses Chrome's secure `scripting` API for injection
-- Loads React Scan from the official unpkg CDN
-- No data collection or external communication beyond fetching React Scan
+- Uses Chrome's secure extension APIs for injection
+- Uses locally bundled React Scan (no external network requests)
+- No data collection or external communication
 - Follows Chrome extension security best practices
 
 ## 🔍 Troubleshooting
@@ -136,11 +136,11 @@ To modify this extension:
 
 ```
 ├── manifest.json          # Extension configuration
-├── background.js           # Handles injection via CDN
+├── background.js           # Manages extension state
 ├── content.js             # Signals for injection
 ├── popup.html             # Simple toggle interface
 ├── popup.js               # Popup logic
-├── react-scan.js          # Bundled React Scan (fallback)
+├── react-scan.js          # Patched React Scan bundle with iframe support
 ├── page-script.js         # Page-level injection script
 ├── icons/                 # Extension icons
 ├── README.md              # This file
@@ -166,4 +166,4 @@ Contributions welcome! Please:
 3. Test thoroughly
 4. Submit a pull request
 
-This extension aims to be simple, reliable, and always up-to-date with the latest React Scan features. 
+This extension aims to be simple, reliable, and specifically optimized for iframe compatibility with patched React Scan. 

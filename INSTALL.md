@@ -26,12 +26,12 @@ Try these React applications to see React Scan in action:
 
 ## ✨ Features
 
-- ✅ **Latest React Scan** (automatically downloads from CDN)
+- ✅ **Patched React Scan** (bundled with enhanced iframe support)
 - 🎛️ **Easy toggle interface**
 - ⚙️ **Advanced options** (toolbar, tracking, logging)
 - 🔄 **Auto React detection**
 - 🎨 **Modern, beautiful UI**
-- 🖼️ **Enhanced iframe support**
+- 🖼️ **Enhanced iframe support** (patched source code)
 
 ## 🔧 Troubleshooting
 
@@ -53,21 +53,21 @@ This extension has enhanced iframe support by default - no additional configurat
 
 ## 🚀 What's Different?
 
-This extension uses **React Scan @latest** (always the newest version) compared to other extensions that use older, fixed versions. You get:
+This extension uses a **patched version of React Scan** with enhanced iframe support, compared to other extensions that use unmodified versions. You get:
 
-- Latest performance detection features
-- Most accurate highlighting
-- Improved visual feedback
-- Enhanced iframe compatibility
+- **Enhanced iframe compatibility** - works where other extensions fail
+- **Patched source code** - `allowInIframe` forced to `true` by default
+- **Bundled locally** - no CDN dependencies or loading delays
+- **Reliable performance** - consistent behavior across all sites
 - Modern extension interface
-- Automatic updates to React Scan
+- **Specialized for iframe use cases**
 
 ## 🔒 Security & Privacy
 
 - **No data collection** - the extension only injects React Scan
-- **Official CDN** - loads React Scan directly from unpkg.com
+- **Local bundle** - uses a locally bundled, patched version of React Scan
 - **Local processing** - all analysis happens in your browser
-- **No external servers** - no data sent anywhere
+- **No external servers** - no data sent anywhere, no CDN dependencies
 
 ## 📋 System Requirements
 
@@ -94,4 +94,4 @@ This extension is designed for developer use. For production distribution, you w
 
 ---
 
-**Note**: This extension loads React Scan directly from the official CDN (`@latest`), ensuring you always get the authentic, up-to-date library with the latest features and improvements. 
+**Note**: This extension uses a locally bundled version of React Scan that has been specifically patched to enhance iframe compatibility. The source code modifications ensure `allowInIframe` is always enabled, making it work reliably in iframe contexts where standard React Scan extensions may fail. 
