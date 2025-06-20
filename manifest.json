@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "React Scan",
-  "version": "1.0",
-  "description": "Automatically detect and analyze performance issues in any React application",
+  "name": "React Iframe Performance",
+  "version": "1.0.0",
+  "description": "Detect performance issues in React apps, including iframes. Click icon to toggle analysis on/off.",
   "permissions": [
     "scripting",
     "storage",

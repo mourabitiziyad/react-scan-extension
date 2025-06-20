@@ -3,7 +3,7 @@ let isEnabled = false;
 
 // Set initial icon state
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('React Scan extension installed');
+  console.log('React Iframe Performance extension installed');
   updateIcon();
 });
 
@@ -65,7 +65,7 @@ function updateIcon() {
   chrome.action.setBadgeText({ text: badgeText });
   chrome.action.setBadgeBackgroundColor({ color: badgeColor });
   chrome.action.setTitle({ 
-    title: `React Scan: ${isEnabled ? 'Enabled' : 'Disabled'} (Click to toggle)` 
+    title: `React Performance: ${isEnabled ? 'Enabled' : 'Disabled'} (Click to toggle)` 
   });
 }
 
