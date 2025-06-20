@@ -1,15 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "React Iframe Performance",
+  "name": "SAP React Performance Monitor",
   "version": "1.0.0",
-  "description": "Detect performance issues in React apps, including iframes. Click icon to toggle analysis on/off.",
+  "description": "Detect performance issues in React apps on SAP development tools. Click icon to toggle analysis on/off.",
   "permissions": [
     "scripting",
     "storage",
     "activeTab"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "https://*.built-in-support.cloud.sap/*",
+    "https://localhost:7000/*"
   ],
   "background": {
     "service_worker": "background.js",
@@ -31,7 +32,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "https://*.built-in-support.cloud.sap/*",
+        "https://localhost:7000/*"
+      ],
       "js": ["content.js"],
       "run_at": "document_start",
       "all_frames": true
@@ -40,7 +44,10 @@
   "web_accessible_resources": [
     {
       "resources": ["react-scan.js"],
-      "matches": ["<all_urls>"]
+      "matches": [
+        "https://*.built-in-support.cloud.sap/*",
+        "https://localhost:7000/*"
+      ]
     }
   ]
 } 
