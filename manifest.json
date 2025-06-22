@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "Detect performance issues in React apps on SAP development tools. Click icon to toggle analysis on/off.",
   "permissions": [
-    "scripting",
     "storage",
     "activeTab"
   ],
